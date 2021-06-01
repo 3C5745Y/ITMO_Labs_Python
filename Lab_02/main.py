@@ -137,3 +137,30 @@ print(listseq)
 
 listseq.remove(listseq[-1])
 print(listseq)
+
+#Словари
+#1-2
+D = {'food':'Apple', 'quantity':4, 'color':'Red'}
+print(D['food'])
+D['quantity'] += 10
+print(D)
+#3-4
+dp = {}
+dp['name'] = input("Enter name: ")
+dp['age'] = int(input("Enter age: "))
+print(dp)
+
+#Вложенность хранения данных
+#1
+rec = {'name': {'firstname': 'Bob', 'lastname': 'Smith'},
+       'job': ['dev', 'mgr'],
+       'age': 25}
+#2
+print('Имя: '+rec['name']['firstname']+', Фамилия: '+ rec['name']['lastname'])
+print('Имя: '+rec['name']['firstname'])
+print("Список должностей: {job}".format(**rec))
+#3
+rec['job'].append('janitor')
+print(rec['job'])
+#4
+print("Имя и фамилия: {0}: \n Список должностей: {1} \n Возраст: {2}".format(rec['name'],rec['job'],rec['age'] ))
